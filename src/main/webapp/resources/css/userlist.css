@@ -1,0 +1,123 @@
+
+
+#u_table {
+	board: 1px solid gray;
+	width: 1300px;
+	hegiht:500px;
+	margin: 0 auto;
+	position : fixed;
+	top : 200px;
+	left : 300px;
+	
+	
+}
+
+#ut_header {
+	
+	border-bottom: 2px solid black;
+	
+	text-align: center;
+}
+
+.admin_title {
+	
+	font-weight: bold;
+	font-size:20px;
+	margin-bottom: 15px;
+	
+}
+
+#ut_body {
+	border-bottom: 1px solid gray;
+		text-align: center;
+}
+
+#user_update {
+	
+	height:22px;
+	text-decoration: none;
+	color: blue;
+	
+}
+#user_update:hover {
+	color: black;
+}
+#user_delete {
+	position:relative;
+	top:1px;
+	border:0;
+	background-color:transparent;
+	color:#FF0000;
+}
+
+#user_delete:hover {
+	color: black;
+}
+
+
+
+#insert_btn {
+	position:relative;
+	text-decoration: center;
+	top:-5px;
+	left:1230px;
+	color:blue;
+	
+	text-decoration: none;
+}
+#insert_btn:hover {
+	
+	color:gray;
+}
+
+
+#insert_btn2 {
+	position:relative;
+	text-decoration: center;
+	top:-5px;
+	left:1200px;
+	color:blue;
+	
+	text-decoration: none;
+}
+#insert_btn2:hover {
+	
+	color:gray;
+}
+
+#insert_btn3 {
+	position:relative;
+	text-decoration: center;
+	top:-5px;
+	left:1235px;
+	color:blue;
+	
+	text-decoration: none;
+}
+#insert_btn3:hover {
+	
+	color:gray;
+}
+
+#page_btn {
+	position: relative;
+	left:600px;
+}
+#page_btn > a {
+	
+	text-decoration: none;
+	color:black;
+}
+#page_btn > a:hover {
+	
+	color:blue;
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+

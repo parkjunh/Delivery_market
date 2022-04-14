@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0
+//EN " "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="delivery_market">
+	<insert parameterType="hashMap" id="join"
+		useGeneratedKeys="true" keyProperty="user_seq">
+		<![CDATA[
+		insert into user (user_seq, user_id, user_pwd, user_name, user_phone, user_email, user_gender, user_address) 
+		 values ((select * from calcUserSeqMax),#{user_id},#{user_pwd} , #{user_name} , #{user_phone} , #{user_email}, #{user_gender} ,#{user_address});
+		]]>
+	</insert>
+
+	<select parameterType="hashMap" id="login" resultType="hashMap">
+		<![CDATA[
+		select user_id, user_pwd, user_level, user_seq, user_phone, user_address, user_name from user where user_id=#{user_id} and user_pwd=#{user_pwd};
+		]]>
+	</select>
+
+
+	<select id="findID" parameterType="hashMap" resultType="hashMap">
+		<![CDATA[
+			select * from user where user_name=#{user_name} and user_phone=#{user_phone};
+		]]>
+	</select>
+
+	<select id="findPWD" resultType="hashMap">
+		<![CDATA[
+		select * from user where user_id=#{user_id} and user_name=#{user_name} and user_phone=#{user_phone};
+		]]>
+	</select>
+
+	<update id="updatePWD" parameterType="Int">
+		<![CDATA[
+		update user set user_pwd=#{user_pwd} where user_id=#{user_id};
+		]]>
+
+	</update>
+
+
+	<update id="User_update" parameterType="hashMap">
+		<![CDATA[
+		update user set user_id=#{user_id}, user_pwd=#{user_pwd},user_name =#{user_name},user_phone=#{user_phone},
+		 user_email =#{user_email}, user_address=#{user_address},user_gender=#{user_gender} where user_seq = #{user_seq};		
+		 ]]>
+
+	</update>
+
+	<select id="select_list" parameterType="hashMap"
+		resultType="hashMap">
+	<![CDATA[ 
+	select user_seq, user_id, user_pwd, user_name, user_phone, user_email, user_gender, user_address, user_level from user order by user_seq desc
+	]]>
+		<choose>
+			<when test="skipCount==null">
+				limit 0,10
+			</when>
+			<when test="skipCount!=null">
+				limit ${skipCount}, 10
+			</when>
+		</choose>
+	</select>
+
+	<select id="user_count" parameterType="hashMap" resultType="int">
+		select count(*) from user
+	</select>
+
+	<select id="userUpdateView" parameterType="hashMap"
+		resultType="hashMap">
+	<![CDATA[ 
+	select user_seq, user_id, user_pwd, user_name, user_phone, user_email, user_gender, user_address from user where user_seq = #{user_seq}
+	
+	]]>
+	</select>
+
+
+	<delete id="user_delete" parameterType="hashMap">
+		<![CDATA[
+			delete from user where user_seq=#{user_seq}
+		]]>
+
+	</delete>
+
+
+
+
+
+	<!-- 카테고리 mapper -->
+	<select resultType="hashMap" parameterType="hashMap"
+		id="product_category">
+	
+		<![CDATA[
+			select category_code , category_name , category_insertdate from product_category  order by category_code desc 
+		]]>
+		<choose>
+			<when test="skipCount==null">
+				limit 0,10
+			</when>
+			<when test="skipCount!=null">
+				limit ${skipCount}, 10
+			</when>
+		</choose>
+	</select>
+
+	<select id="category_count" parameterType="hashMap"
+		resultType="int">
+		select count(*) from product_category
+	</select>
+
+
+	<select resultType="hashMap" parameterType="hashMap"
+		id="category_update_view">
+	
+		<![CDATA[
+			select category_code , category_name from product_category where category_code=#{category_code} 
+		]]>
+
+	</select>
+
+	<update id="category_update" parameterType="hashMap">
+		<![CDATA[
+			update product_category set category_name=#{category_name} where category_code= #{category_code}
+		]]>
+
+	</update>
+	<delete id="category_delete" parameterType="hashMap">
+		<![CDATA[		
+			delete from product_category where category_code=#{category_code}
+		]]>
+
+	</delete>
+
+	<insert id="category_insert" parameterType="hashMap">
+		<![CDATA[
+			insert into product_category (category_code, category_name) values ((select * from category_Max_Num),#{category_name}) ;
+		]]>
+	</insert>
+
+
+
+
+	<!-- 상품 mapper -->
+	<select resultType="hashMap" parameterType="hashMap"
+		id="product_list">
+		<![CDATA[
+			select product_num , category_name , product_name , product_price , product_insertdate from product order by product_num desc
+		]]>
+		<choose>
+			<when test="skipCount==null">
+				limit 0,10
+			</when>
+			<when test="skipCount!=null">
+				limit ${skipCount}, 10
+			</when>
+		</choose>
+	</select>
+
+	<select id="product_count" parameterType="hashMap"
+		resultType="int">
+		select count(*) from product
+	</select>
+
+	<select resultType="hashMap" parameterType="hashMap"
+		id="productcreate_categoryview">
+	
+		<![CDATA[
+			select category_name from product_category order by category_code desc
+		]]>
+
+	</select>
+
+	<insert id="product_insert" parameterType="hashMap">
+		<![CDATA[
+			insert into product(category_name,product_name,product_price,product_content,img_name) 
+			values (#{category_name},#{product_name},#{product_price},#{product_content},#{img_name})
+		]]>
+	</insert>
+
+	<select resultType="hashMap" parameterType="hashMap"
+		id="product_updateView">
+		<![CDATA[
+		
+			select product_num , category_name , product_name , product_price , product_content, img_name  from product  where product_num=#{product_num}
+		]]>
+
+	</select>
+
+	<update id="product_update" parameterType="hashMap">
+		<![CDATA[
+			update product set product_name=#{product_name}, product_content=#{product_content}  ,category_name= #{category_name} , product_price = #{product_price}, img_name = #{img_name} where product_num = #{product_num}
+		]]>
+	</update>
+
+	<delete id="product_delete" parameterType="hashMap">
+		<![CDATA[
+			delete from product where product_num=#{product_num}
+		]]>
+	</delete>
+
+
+	<!-- 이미지 -->
+	<insert id="img_insert" parameterType="hashMap">
+		<![CDATA[
+			insert into img_file (img_realname, img_name) 
+			   value (#{img_realname},#{img_name});
+		]]>
+	</insert>
+
+	<select id="img_view" resultType="hashMap"
+		parameterType="hashMap">
+		<![CDATA[
+			select  img_seq,img_name,img_realname from img_file where img_name=#{img_name}
+		]]>
+	</select>
+
+	<!-- 메인 페이지 -->
+
+	<select resultType="hashMap" parameterType="hashMap"
+		id="main_list">
+		<![CDATA[
+			select product_num , category_name, product_name, product_price, img_name from product order by product_num desc limit 20
+		]]>
+
+	</select>
+	<select resultType="hashMap" parameterType="hashMap"
+		id="product_detail">
+		<![CDATA[
+			select product_num,product_name,category_name,product_content,product_price,img_name from product where product_num=#{product_num}
+		]]>
+	</select>
+
+	<select resultType="hashMap" parameterType="hashMap"
+		id="od_price">
+		<![CDATA[
+			select product_price , product_count from userorder_detail where product_price = #{product_price} and product_count= #{product_count};
+		]]>
+	</select>
+
+
+	<insert id="uo_insert" parameterType="hashMap">
+		<![CDATA[
+			insert into user_order (user_id , user_seq , address , reciver_name, reciver_phone) 
+			value (#{user_id} ,#{user_seq} , #{address} , #{reciver_name} , #{reciver_phone})
+		]]>
+	</insert>
+
+
+	<insert id="uod_insert" parameterType="hashMap">
+		<![CDATA[
+			insert into userorder_detail (order_num , product_num , product_count , product_price)
+			value ((select  max(order_num) from user_order), #{product_num}, #{product_count} , #{product_price});
+
+		]]>
+	</insert>
+
+
+	<select resultType="hashMap" parameterType="hashMap"
+		id="order_list">
+		<![CDATA[
+			select * from userorder_detail left join user_order on userorder_detail.order_num = user_order.order_num left join product on userorder_detail.product_num = product.product_num  where user_seq =#{user_seq};
+		]]>
+	</select>
+	
+	<delete id="order_delete"  parameterType="hashMap">
+		delete from userorder_detail where order_detail_num = #{order_detail_num};
+	</delete>
+
+
+
+
+
+
+
+
+</mapper>

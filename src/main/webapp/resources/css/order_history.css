@@ -1,0 +1,42 @@
+#oh_position1 {
+	width: 1150px;
+	height: 600px;
+	margin: 0 auto;
+	margin-top: 0px;
+}
+#oh_position2 {
+	position:relative;
+	top:50px;
+	margin: 0 auto;
+	width: 950px;
+	height: 500px;
+}
+
+#order_title {
+	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+#ut_header {
+	
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+#ut_tbody {
+	border-bottom: 1px solid black;
+}
+
+.table > thead > tr > th , .tr_tag > td {
+	text-align: center;
+}
+
+#delete_btn {
+	border: none;
+	background-color:white;
+	color:red;
+	font-weight: 
+}
+#delete_btn:hover {
+	background-color:white;
+	color:gray;
+}

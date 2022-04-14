@@ -1,0 +1,63 @@
+#order_position1 {
+		width: 1150px;
+	height: 500px;
+	margin: 0 auto;
+	margin-top: 0px;
+	border: 1px solid gray;
+	
+}
+#order_position2 {
+	position:relative;
+	top:50px;
+	margin: 0 auto;
+	width: 600px;
+	height: 350px;
+	border:1px solid gray;
+	border-radius: 30px;
+}
+
+.order_title {
+	
+	position:relative;
+	top:15px;
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 20px;
+	text-align: center;
+	margin-bottom: 10px;
+	
+}
+
+#order_form > div > label , #order_form > div > input ,#order_submit {
+	position:relative;
+}
+
+#order_form > div > label {
+	
+	left:50px;
+	margin-bottom: 20px;
+}
+
+#order_form > div > input {
+	
+	left:120px;
+	
+	width:300px;
+	
+	border: 1px solid black;
+	border-radius: 10px;
+}
+#order_submit {
+	width: 300px;
+	height: 30px;
+	background-color:black;
+	color:white;
+	font-weight: bold;
+	border: 1px solid black;
+	border-radius: 10px;
+	left:170px;
+}
+
+
+
+

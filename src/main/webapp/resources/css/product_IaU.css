@@ -1,0 +1,177 @@
+#product_position {
+	width: 1150px;
+	height: 800px;
+	margin: 0 auto;
+	margin-top: 0px;
+}
+
+#product_update {
+	position: relative;
+	top: 150px;
+	margin: 0 auto;
+	width: 600px;
+	height: 570px;
+	border: 1px solid gray;
+	border-radius: 30px;
+}
+#title {
+	position: relative;
+	top: 15px;
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+
+#pc_name, #pc_category,#pc_price, #pc_imgName  {
+	position: relative;
+	top: 20px;
+	left: 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+#pc_name {
+	margin-bottom: 10px;
+}
+
+#pc_category {
+	margin-top:80px;
+		
+	position: relative;
+	top:-40px;
+}
+#pc_price {
+	margin-top:20px;
+	top:-49px;
+}
+#pc_imgName {
+	margin-top:20px;
+	
+	position: relative;
+	top:-40px;
+}
+#divtag {
+
+	
+}
+
+#p_name{
+	position: relative;
+	left: 80px;
+	top: 30px;
+	width:350px;
+	height:40px;
+	top:20px;
+	border:1px solid black;
+	border-radius: 10px;
+}
+#pc_content {
+	position:relative;
+	top:-70px;
+	left:30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#p_content {
+	position: relative;
+	left: 78px;
+	top: 30px;
+	width: 350px;
+	height: 120px;
+	border:1px solid black;
+	border-radius: 10px;
+}
+
+#p_category {
+	position: relative;
+	left:80px;
+	top: -40px;
+	width: 180px;
+	height: 30px;
+	border-radius: 10px;
+}
+
+#p_price {
+	position: relative;
+	top:-50px;
+	left:105px;
+	width: 360px;
+	height:40px;
+	border:1px solid black;
+	border-radius: 10px;
+}
+
+#upload_name {
+    display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid black;
+    border-radius:10px;
+    width: 242px;
+    color: #999999;
+	position: relative;
+	top: -70px;
+	left:138px;
+	 
+}
+#upload_label {
+	display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    vertical-align: middle;
+    background-color: black;
+    border-radius:10px;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+    position: relative;
+	top: -70px;
+	left:138px;
+	
+}
+
+#filebox > input[type="file"] {
+    position: relative;
+    top:0px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+#submit_btn {
+	position: relative;
+	left:150px;
+	top:-45px;
+	width: 300px;
+	height: 40px;
+	background-color:black;
+	color:white;
+	border:1px solid black;
+	border-radius: 10px;
+}
+#submit_btn:hover {
+	background-color:white;
+	color: black;
+}
+
+#history_btn > a {
+	position: relative;
+	left:470px;
+	top:-74px;
+	text-decoration: none;
+	color:blue;
+}
+#history_btn > a:hover {
+	color:gray;
+}
+
+
+
+
+
+

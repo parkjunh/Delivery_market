@@ -1,0 +1,10 @@
+#c_table {
+	board: 1px solid gray;
+	width: 800px;
+	hegiht: 500px;
+	margin: 0 auto;
+	position: fixed;
+	top: 200px;
+	left: 300px;
+}
+

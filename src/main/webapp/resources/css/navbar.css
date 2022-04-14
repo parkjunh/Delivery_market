@@ -1,0 +1,39 @@
+#mainpage_2 {
+	width: 1150px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 0px;
+}
+
+.main_menu {
+	display: flex;
+	align-items: center;
+	height: 80px;
+	border-bottom: 2px solid black;
+}
+
+.main_menu  a {
+	font-size: 20px;
+	margin-left: 150px;
+	color: black;
+	text-decoration: none;
+	position: relative;
+	padding: 6px 12px;
+	font-weight: bold;
+}
+
+.main_menu a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 2px;
+	background: gray;
+	transition: all .5s ease-out;
+}
+
+.main_menu a:hover::after {
+	width: 100%;
+}

@@ -1,0 +1,84 @@
+#login_view1 {
+	width: 1150px;
+	height: 500px;
+	margin: 0 auto;
+	margin-top: 0px;
+}
+#login_view2 {
+	position:relative;
+	top:100px;
+	margin: 0 auto;
+	width: 600px;
+	height: 260px;
+	border:1px solid gray;
+	border-radius: 30px;
+}
+
+#login_title{	
+	position:relative;
+	top:30px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 28px;
+	padding-bottom: 20px;
+}
+#login_form {
+	margin-top:30px;
+}
+
+#login_form > div {
+	
+	padding-bottom: 5px;
+}
+
+#findchk {
+	text-align: right;
+	position:relative;
+	right: 100px;
+	
+}
+#findchk > a {
+	font-size:13px;
+	text-decoration: none;
+	color:black;
+}
+#findchk > span {
+	font-size:13px;
+}
+
+#findchk > a:hover {
+	
+	border-bottom: 1px solid gray;
+}
+#id_input , #pwd_input {
+	width: 400px;
+	height: 30px;
+	position:relative;
+	left : 100px;
+	border:1px solid gray;
+	border-radius: 10px;
+	margin-bottom: 3px;
+}
+#login_next {
+	position:relative;
+	left : 100px;
+	
+}
+#login_next >input {
+	margin-top:5px;
+	border : 1px solid gray;
+	width: 400px;
+	height: 40px; 
+	border-radius: 10px;
+	background-color: #282828;
+	color:white;
+	font-weight: bold;
+	font-size:15px;
+}
+#login_next >input:hover {
+	color:black;
+	background-color: white;
+}
+
+
+

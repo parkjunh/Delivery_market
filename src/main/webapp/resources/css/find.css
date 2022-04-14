@@ -1,0 +1,105 @@
+#find_position {
+	width: 1150px;
+	height: 500px;
+	margin: 0 auto;
+	margin-top: 0px;
+}
+
+
+#find_id {
+	position:relative;
+	top:100px;
+	margin: 0 auto;
+	width: 600px;
+	height: 260px;
+	border:1px solid gray;
+	border-radius: 30px;
+	
+}
+
+#find_pwd {
+	position:relative;
+	top:100px;
+	margin: 0 auto;
+	width: 600px;
+	height: 310px;
+	border:1px solid gray;
+	border-radius: 30px;
+	
+}
+
+#fi_form {
+	position: relative;
+	top: 20px;
+	left:100px;
+	width: 400px;
+	
+}
+#find_title {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+#fi_form > div { 
+	margin-bottom: 15px;
+	
+}
+#fi_form > div > label {
+	font-weight: bold;
+	font-size: 18px;
+}
+#fi_name,#fi_phone,#fi_phone1,#fi_id {
+	width: 300px;
+	position: relative;
+	border: 3px solid gray;
+	border-radius: 10px;
+}
+#fi_name:hover ,#fi_phone:hover,#fi_phone1:hover,#fi_id:hover {
+	border:3px solid black;
+}
+
+#fi_name {
+	left:60px;
+}
+#fi_phone {
+	left:10px;
+}
+
+#fi_phone1 {
+	left:27px;
+}
+#fi_id {
+	left:44px;
+}
+
+
+#find_btn {
+	width: 99%;
+	height: 40px;
+	color:white;
+	background-color:black;
+	border:1px solid black;
+	border-radius:10px;
+	font-weight: bold;
+}
+#find_btn:hover {
+	background-color:white;
+	color:black;
+}
+#find_success {
+	color:red;
+}
+.find_result {
+	margin-bottom: 10px;
+}
+#loginPage {
+	text-decoration: none;
+	color:blue;
+}
+#loginPage:hover {
+	color:gray;
+}
+
+
+
+

@@ -1,0 +1,118 @@
+#join_form1 {
+	width: 1150px;
+	height: 800px;
+	margin: 0 auto;
+	margin-top: 0px;
+}
+
+#join_form2 {
+	position: relative;
+	top: 50px;
+	margin: 0 auto;
+	width: 600px;
+	height: 570px;
+	border: 1px solid gray;
+	border-radius: 30px;
+}
+
+#user_update {
+	position: relative;
+	top: 150px;
+	margin: 0 auto;
+	width: 600px;
+	height: 570px;
+	border: 1px solid gray;
+	border-radius: 30px;
+}
+
+.form-label {
+	position: relative;
+	top: 20px;
+	left: 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#join_title {
+	position: relative;
+	top: 15px;
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+#inputId {
+	
+}
+
+#inputPassword {
+	
+}
+
+#inputPassword, #inputId, #inputName, #inputEmail4 {
+	position: relative;
+	left: 100px;
+	top: -15px;
+}
+
+#inputPassword, #inputId, #inputName, #inputEmail4, #inputPhone,
+	#inputAddress {
+	width: 400px;
+	height: 40px;
+	border-radius: 10px;
+	border: 1px solid gray;
+}
+
+#phone_title {
+	position: relative;
+	top: -1px;
+}
+
+#inputPhone, #inputAddress, #Gender_btn {
+	position: relative;
+}
+
+#inputPhone {
+	left: 52px;
+}
+
+#inputAddress {
+	left: 98px;
+	top: -5px;
+}
+
+#join_address {
+	position: relative;
+	top: 30px;
+}
+
+#Gender_btn {
+	left: 98px;
+	top: -6px;
+}
+
+#inputgendM, #inputgendW {
+	width: 15px;
+	height: 15px;
+	top: 10px;
+	margin-right: 10px;
+}
+
+#lg_m, #lg_w {
+	margin-right: 10px;
+}
+
+#join_submit {
+	background-color: black;
+	border: 1px solid gray;
+	color: white;
+	border-radius: 10px;
+	position: relative;
+	left: 150px;
+}
+
+#join_submit:hover {
+	color: black;
+	background-color: white;
+}

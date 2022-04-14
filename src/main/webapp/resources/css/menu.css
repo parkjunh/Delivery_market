@@ -1,0 +1,33 @@
+.left_menu {
+	width: 200px; 
+	position: fixed; 
+	background-color: #fff; 
+	box-shadow:2px 0 5px rgba(0,0,0,0.3);
+	height: 100%;
+	z-index: 1;
+	}
+.left_menu .menu a {
+	display: block; 
+	text-decoration: none;
+	padding-left: 40px; 
+	padding-top:10px; 
+	padding-bottom:10px; 
+	color: #434343;
+	font-weight: 550;
+}
+.left_menu .menu a:hover {
+	background-color: black;
+	color:white;
+}
+
+
+#logo {text-align: center; display: block; margin:20px 0;}
+#logo > img {width: 85px;}
+
+#logo_img {
+	position:relative;
+	left: 20px;
+	
+	width: 150px;
+	
+}
