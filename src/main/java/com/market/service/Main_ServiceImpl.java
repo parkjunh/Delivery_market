@@ -33,7 +33,7 @@ public class Main_ServiceImpl implements Main_Service {
 		return this.dao.product_detail(map);
 	}
 
-	public Map<String, Object> od_price(Map<String, Object> map) {
+	public List<Map<String, Object>> od_price(Map<String, Object> map) {
 
 		return this.dao.od_price(map);
 	}

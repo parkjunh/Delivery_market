@@ -13,7 +13,7 @@ public interface Main_Service {
 	
 	Map<String,Object > product_detail(Map<String, Object> map);
 	
-	Map<String, Object> od_price (Map<String , Object> map);
+	List<Map<String, Object>> od_price (Map<String , Object> map);
 
 	boolean uo_insert(Map<String, Object> map);
 	boolean uod_insert(Map<String, Object> map);

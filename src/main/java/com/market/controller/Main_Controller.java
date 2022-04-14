@@ -55,7 +55,7 @@ public class Main_Controller {
 
 		ModelAndView mav = new ModelAndView();
 		System.out.println("-----------order Get Start ------------");
-		Map<String, Object> price = this.service.od_price(map);
+		List<Map<String, Object>> price = this.service.od_price(map);
 		mav.addObject("data", map);
 		// mav.addObject("my_user_data", mymap);
 		System.out.println("map = " + map);

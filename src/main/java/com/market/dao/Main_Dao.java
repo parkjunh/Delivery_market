@@ -28,9 +28,9 @@ public class Main_Dao {
 		return this.sqlSessionTemplate.selectOne("delivery_market.product_detail", map);
 	}
 	
-	public Map<String,Object> od_price (Map<String, Object> map) {
+	public List<Map<String,Object>> od_price (Map<String, Object> map) {
 		
-		return this.sqlSessionTemplate.selectOne("delivery_market.od_price", map);
+		return this.sqlSessionTemplate.selectList("delivery_market.od_price", map);
 	}
 	
 	
