@@ -18,5 +18,5 @@
 ### 개발기간:
 * 2022-03-23 ~ 2022-04-08
 
-### 프로젝트  [ - 상세보기] (https://github.com/parkjunh/Delivery_market/wiki)
+### 프로젝트  [ - 상세보기](https://github.com/parkjunh/Delivery_market/wiki)
 
